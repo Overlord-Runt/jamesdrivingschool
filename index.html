@@ -4,67 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>James Driving School</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-        .navbar {
-            background-color: lightgray;
-            color: black;
-            padding: 10px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-        }
-        .navbar a {
-            color: black;
-            text-decoration: none;
-            padding: 10px 15px;
-        }
-        .navbar a:active {
-            background-color: gray;
-            color: white;
-        }
-        .navbar a:hover {
-            background-color: darkgray;
-        }
-        .navbar a.active:hover {
-            background-color: lightgray;
-            color: black;
-        }
-        content {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 5px;
-        }
-        .container {
-            display: flex;
-            background-color: white;
-            margin-top: 20px;
-            margin-left: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="navbar">
+    <div class="navbar site-wrap">
         <h1>James Driving School</h1>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="#services">Services</a>
+            <a href="#packages">Packages</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </div>
     <div class="content">
         <h2>Welcome to James Driving School</h2>
         <p>Your journey to becoming a safe and skilled driver starts here.</p>
     </div>
-    <div class="container">
-        <img src="https://via.placeholder.com/150" alt="Driving School Image" style="width:150px;height:150px;margin-right:20px;">
+    <div class="container site-wrap" id="services">
+        <img class="img-small" src="https://via.placeholder.com/150" alt="Driving School Image">
         <div>
             <h1>Our Services</h1>
             <p>We offer a range of driving courses to suit your needs.</p>
@@ -78,21 +34,21 @@
             </ul>
         </div>
     </div>
-    <div class="container">
-        <img src="https://via.placeholder.com/150" alt="Driving School Image" style="width:150px;height:150px;margin-right:20px;">
+    <div class="container site-wrap" id="packages">
+        <img class="img-small" src="https://via.placeholder.com/150" alt="Driving School Image">
         <div>
             <h1>Packages</h1>
             <p>Choose from our various packages to get the best value for your driving lessons.</p>
             <ul>
-                <li>1hr for $70</li>
-                <li>10hrs for $625</li>
+                <li>1hr for $65</li>
+                <li>Special package available for 10 lessons</li>
                 <li>Test Package</li>
             </ul>
         </div>
     </div>
-    <div class="container">
-        <img src="https://via.placeholder.com/150" alt="Driving School Image" style="width:150px;height:150px;margin-right:20px;">
-        <div style="font-size: xx-large;">
+    <div class="container site-wrap">
+        <img class="img-small" src="https://via.placeholder.com/150" alt="Driving School Image">
+        <div class="big">
             <h1>Why Choose Us?</h1>
             <ul>
                 <li>Experienced RMS QualifiedInstructors</li>
@@ -104,12 +60,12 @@
             </ul>
         </div>
     </div>
-    <div class="container">
-        <h1 style="text-align: center;">Locations</h1>
+    <div class="site-wrap">
+        <h1 class="center">Locations</h1>
         <div>
-            <p style="text-align: center;">We serve the following areas: </p>
-            <div class="container">
-                <div style="font-size: xx-large;">
+            <p class="center">We serve the following areas:</p>
+            <div class="columns-2">
+                <div class="big">
                     <ul>
                         <li>Blacktown</li>
                         <li>Mount Druitt</li>
@@ -118,10 +74,9 @@
                         <li>Marsen Park</li>
                         <li>Schofield</li>
                         <li>Colebee</li>
-
                     </ul>
                 </div>
-                <div style="font-size: xx-large;">
+                <div class="big">
                     <ul>
                         <li>Doonside</li>
                         <li>Marayong</li>
@@ -130,15 +85,14 @@
                         <li>Kings Langley</li>
                         <li>Seven Hills</li>
                         <li>Quakers Hill</li>
-
                     </ul>
                 </div>
             </div>
-            <p style="text-align: center;"><br>And many more areas in the Western Sydney region.</p>
+            <p class="center"><br>And many more areas in the Western Sydney region.</p>
         </div>
     </div>
-    <div class="container">
-        <img src="https://via.placeholder.com/150" alt="Driving School Image" style="width:150px;height:150px;margin-right:20px;">
+    <div class="container site-wrap" id="contact">
+        <img class="img-small" src="https://via.placeholder.com/150" alt="Driving School Image">
         <div>
             <h1>Contact Us</h1>
             <p>For more information or to book a lesson, please contact us:</p>
@@ -151,7 +105,7 @@
     </div>
 
 
-    <footer style="text-align: center; margin-top: 20px;">
+    <footer class="center muted" style="margin-top:20px;">
         <p>&copy; 2023 James Driving School. All rights reserved.</p>
     </footer>
 </body>

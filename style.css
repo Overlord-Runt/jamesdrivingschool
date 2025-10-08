@@ -1,0 +1,128 @@
+/* Mobile-first responsive stylesheet for James Driving School */
+:root{
+  --bg: #f4f4f7;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #0b5ed7; /* blue accent */
+  --accent-contrast: #ffffff;
+  --max-width: 1100px;
+  --radius: 10px;
+}
+
+/* Reset / base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--bg);
+  color:#1f2937;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  padding:0;
+}
+
+/* Container centering for wide screens */
+.site-wrap{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:16px;
+}
+
+/* Navigation */
+.navbar{
+  background:linear-gradient(180deg,#f8fafc,#eef2ff);
+  color:var(--accent-contrast);
+  padding:14px 16px;
+  position:sticky;
+  top:0;
+  z-index:50;
+  box-shadow:0 2px 6px rgba(15,23,42,0.06);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.navbar h1{font-size:1.05rem;margin:0;color:#0f172a}
+.nav-links{display:none;gap:12px}
+.nav-links a{color:#0f172a;text-decoration:none;padding:8px 10px;border-radius:8px}
+.nav-links a:hover{background:rgba(15,23,42,0.06)}
+
+/* simple hero / content card */
+.content, .card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:16px;
+  margin:14px 0;
+  box-shadow:0 1px 2px rgba(2,6,23,0.04);
+}
+.content h2{margin-top:0}
+
+/* media/image + text blocks stack on mobile */
+.container{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  padding:8px 0;
+  flex-direction:row; /* default for small components */
+  flex-wrap:wrap;
+}
+.container img{width:100%;max-width:150px;height:auto;border-radius:8px;object-fit:cover}
+.container > div{flex:1;min-width:0}
+
+/* headings and lists */
+h1,h2,h3{color:#0f172a}
+h1{font-size:1.2rem;margin:0 0 8px}
+h2{font-size:1rem;margin:0 0 8px}
+ul{margin:8px 0;padding-left:20px}
+li{margin:6px 0}
+
+/* footer */
+footer{padding:18px 8px;text-align:center;color:var(--muted);font-size:0.95rem}
+
+/* Utility classes */
+.center{text-align:center}
+.muted{color:var(--muted)}
+
+/* Accessibility: focus visible */
+a:focus{outline:3px solid rgba(11,94,215,0.18);outline-offset:3px}
+
+/* Mobile-first: small screens look good with stacked layout */
+@media (min-width:560px){
+  .container{gap:18px}
+  .navbar h1{font-size:1.15rem}
+}
+
+/* Tablet and above: show nav links and allow two-column layouts */
+@media (min-width:768px){
+  .nav-links{display:flex}
+  .navbar{padding:12px 20px}
+  .site-wrap{padding:20px}
+  /* make image+content side-by-side */
+  .container{flex-direction:row}
+  .container img{flex:0 0 180px;max-width:180px}
+}
+
+/* Desktop: multi-column for locations lists */
+@media (min-width:1000px){
+  .columns-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .container{gap:22px}
+}
+
+/* Specific tweaks to match existing inline styles in HTML */
+.big{font-size:1.25rem}
+
+/* Make sure content within nested containers doesn't overflow */
+.container ul{margin:0}
+
+/* Small helpers for images used inline */
+.img-small{width:150px;height:150px;object-fit:cover;border-radius:8px}
+
+/* Improve link colors */
+a{color:var(--accent)}
+
+/* Provide a simple call-to-action style */
+.btn{
+  display:inline-block;padding:8px 14px;background:var(--accent);color:var(--accent-contrast);border-radius:8px;text-decoration:none;font-weight:600}
+
+/* End of stylesheet */
